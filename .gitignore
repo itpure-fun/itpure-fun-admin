@@ -6,5 +6,5 @@ dist-ssr
 *.local
 .idea
 .env
-.end.development
+.env.development
 .env.production
