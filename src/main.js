@@ -53,8 +53,4 @@ window.Request = request
 
 app.mount('#app')
 
-tool.capsule('Avenue', `v${packageJson.version} release`, 'warning')
-console.log('Avenue后台管理系统基于MineAdmin: https://www.mineadmin.com');
-console.log('Avenue 官网  https://www.avenue.wang/')
-console.log('Avenue Github https://github.com/naroat/Avenue')
-console.log('请不要吝啬您的 star，谢谢 ~ 🤩🤩🤩')
+tool.capsule('ITPURE.FUN', `v${packageJson.version} release`, 'warning')

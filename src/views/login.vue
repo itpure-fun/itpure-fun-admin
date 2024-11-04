@@ -13,13 +13,15 @@ import verifyCode from '@cps/ma-verifyCode/index.vue'
 import { useUserStore } from '@/store'
 import { useTagStore } from '@/store'
 import { useRouter, useRoute } from 'vue-router'
-import { request } from '@/utils/request'
 
-request({
-  url: 'system/getBingBackgroundImage', timeout: 10000, method: 'get'
-}).then( res => {
-  document.getElementById('background').style.backgroundImage = `url(${res.data.url})`
-})
+//import { request } from '@/utils/request'
+// request({
+//   url: 'system/getBingBackgroundImage', timeout: 10000, method: 'get'
+// }).then( res => {
+//   document.getElementById('background').style.backgroundImage = `url(${res.data.url})`
+// })
+const bgImg = ref('');
+
 
 const router = useRouter()
 const route  = useRoute()
@@ -63,7 +65,7 @@ const handleSubmit = async ({ values, errors }) => {
   <div class="login-container">
     <div class="login-width md:w-10/12 w-11/12 mx-auto flex justify-between h-full items-center">
       <div class="w-6/12 mx-auto left-panel rounded-l pl-5 pr-5 hidden md:block">
-        <div class="logo"><img :src="`${$url}logo.svg`" width="45"><span>{{ $title }}</span></div>
+        <div class="logo"><img :src="`${$url}logo.png`" width="45"><span class="text-black">{{ $title }}</span></div>
         <div class="slogan flex justify-end"><span>---- {{ $t('sys.login.slogan') }}</span></div>
       </div>
 
@@ -125,20 +127,18 @@ const handleSubmit = async ({ values, errors }) => {
           </a-form-item>
 
           <a-form-item :hide-label="true" class="mt-5">
-            <a-button html-type="submit" type="primary" long size="large" :loading="loading">
+            <a-button html-type="submit" type="primary" long size="large" :loading="loading" style="background-color: #000;">
               {{ $t('sys.login.loginBtn') }}
             </a-button>
           </a-form-item>
 
-          <!-- <a-divider orientation="center">{{ $t('sys.login.otherLoginType') }}</a-divider>
-          <div class="flex w-3/4 pt-2 mx-auto items-stretch justify-around">
-            <a-avatar class="other-login wechat"><icon-wechat /></a-avatar>
-            <a-avatar class="other-login alipay"><icon-alipay-circle /></a-avatar>
-            <a-avatar class="other-login qq"><icon-qq /></a-avatar>
-            <a-avatar class="other-login weibo"><icon-weibo /></a-avatar>
-          </div> -->
         </a-form>
       </div>
+
+      <div class="w-full absolute mb-[-550px] text-center text-white">
+        <div class="p-2]">Powered by <a href="https://www.mineadmin.com/" target="_blank" class="text-[#fff] underline">MineAdmin</a></div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -149,6 +149,20 @@ const handleSubmit = async ({ values, errors }) => {
   z-index: 1;
   width: 100%;
   height: 100%;
+  background-image: linear-gradient(45deg,#2c3e50,#27ae60,#2980b9,#e74c3c,#8e44ad);
+  background-size: 400%;
+  animation: bganimation 15s infinite;
+}
+@keyframes bganimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
 .bg-backdrop-layout {
   top: 0; left: 0;
@@ -186,7 +200,7 @@ const handleSubmit = async ({ values, errors }) => {
     display: flex; margin-top: 20px; color: #333;
     span {
       font-size: 28px; margin-left: 15px;
-      color: rgb(var(--primary-6));
+      color: #000;
     }
   }
   .slogan {

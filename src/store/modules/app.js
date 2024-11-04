@@ -1,5 +1,5 @@
 let defaultSetting = {
-  mode: 'light',
+  mode: 'dark',//dark light
   tag: true,
   menuCollapse: false,
   menuWidth: 230,
@@ -8,12 +8,13 @@ let defaultSetting = {
   i18n: false,
   language: 'zh_CN',
   animation: 'ma-slide-down',
-  color: '#165dff',
+  color: '#000',
   settingOpen: false,
   searchOpen: false,
   ws: true,
   registerWangEditorButtonFlag: false
 }
+
 
 import { defineStore } from 'pinia'
 import tool from '@/utils/tool'

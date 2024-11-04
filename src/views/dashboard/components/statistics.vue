@@ -8,16 +8,9 @@
  - @Link   https://gitee.com/xmo/mineadmin-vue
 -->
 <template>
-
-  <!-- <st-welcome />
-  <st-count />
-  <st-login-chart /> -->
-  欢迎使用！
-  <div class="block lg:flex">
-    
-    <!-- <st-announced />
-    <st-mineadmin /> -->
-  </div>
+<div class="flex justify-center bg-white h-[86vh]">
+  <img src="/admin/src/assets/welcome.svg" class="w-[100vh]">
+</div>
 </template>
 
 <script setup>
@@ -26,6 +19,5 @@
   // import StLoginChart from './components/st-loginChart.vue'
   // import StMineadmin from './components/st-mineadmin.vue'
   // import StAnnounced from './components/st-announced.vue'
-  
 </script>
 

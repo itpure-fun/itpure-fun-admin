@@ -44,7 +44,7 @@ export default {
   goHome: '回到首页',
   notFoundPage: '啊哦，访问的页面被火星人劫走了...',
   login: {
-    slogan: 'Avenue后台管理系统',
+    slogan: 'ITPURE.FUN后台管理系统',
     title: '登录',
     username: '账户',
     usernameNotice: '请输入账户',

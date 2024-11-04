@@ -145,7 +145,14 @@ const columns = reactive([
   {
     title: "logo",
     dataIndex: "logo",
+    addDisplay: false,
+    editDisplay: false,
+  },
+  {
+    title: "logo",
+    dataIndex: "logo_hash",
     formType: "upload",
+    hide: true,
     dict: {type: 'image', multiple: false},
     requestData:  {onlyUrl: true, path: 'product/logo'},
     commonRules: {
