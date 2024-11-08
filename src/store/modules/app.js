@@ -1,5 +1,5 @@
 let defaultSetting = {
-  mode: 'dark',//dark light
+  mode: 'light',//dark light
   tag: true,
   menuCollapse: false,
   menuWidth: 230,
