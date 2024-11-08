@@ -9,7 +9,7 @@
 -->
 <template>
 <div class="flex justify-center bg-white h-[86vh]">
-  <img src="/admin/src/assets/welcome.svg" class="w-[100vh]">
+  <img src="@/assets/welcome.svg" class="w-[100vh]">
 </div>
 </template>
 
