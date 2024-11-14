@@ -33,7 +33,7 @@ git clone https://github.com/itpure-fun/itpure-fun-admin.git
 ```
 - 安装依赖
 ```
-cd MineAdmin-Vue && pnpm install
+cd itpure-fun-admin && pnpm install
 ```
 - 运行
 ```
